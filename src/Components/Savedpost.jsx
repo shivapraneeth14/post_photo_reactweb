@@ -1,5 +1,6 @@
 import React from 'react'
 import {  useSelector } from 'react-redux';
+import Header from './Header';
 
 
 function Savedpost() {
@@ -7,7 +8,11 @@ function Savedpost() {
   console.log(savedpost)
  
   return (
+   
     <div>
+      <Header/>
+       <div className=' text-center text-2xl'>Saved Posts</div>
+
       {savedpost.map((post,index) => (
   <div className='w-96 h-56 mb-3 px-1 flex-none flex-wrap rounded-xl m-3 border border-blue-500 bg-gray-100 ml-2 flex flex-col justify-between'key={`${post.id}-${index}`}>
     <div className='text-black text-center'>{post.body}</div>
